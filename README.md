@@ -51,7 +51,3 @@
 
 ## 📜 Licencja
 Projekt dostępny na licencji **MIT** – możesz go dowolnie modyfikować i rozwijać. 🚀  
-
----
-
-Czy chcesz dodać coś jeszcze, np. screeny interfejsu? 🎨

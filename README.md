@@ -1,39 +1,47 @@
-
 # 🚗 Warsztat Samochodowy 
 
-## 📌 Opis projektu
+## 📌 Opis projektu  
 **Warsztat Samochodowy** to aplikacja webowa umożliwiająca zarządzanie klientami, pojazdami oraz zleceniami serwisowymi. Projekt został stworzony w **PHP**, korzysta z **Oracle SQL** jako bazy danych i działa lokalnie na **XAMPP**.  
 
-## 🛠️ Technologie
+## 🛠️ Technologie  
 - **PHP** – logika aplikacji  
 - **Oracle SQL** – baza danych  
 - **XAMPP** – lokalny serwer  
 - **Bootstrap** – responsywny design  
 - **HTML/CSS** – frontend  
 
-## 📥 Instalacja
-1. **Pobierz repozytorium:**
-   ```bash
-   git clone https://github.com/twoj-user/twoj-projekt.git
-   cd twoj-projekt
-   ```
-2. **Skonfiguruj bazę danych:**
-   - Utwórz bazę danych w **Oracle SQL**.
-   - Zaimportuj strukturę tabel z pliku `database.sql`.
-   - Skonfiguruj połączenie w `config.php`.
+## 📥 Instalacja  
 
-3. **Uruchom XAMPP i Apache:**
-   - Skopiuj pliki do folderu `htdocs` w katalogu XAMPP.
-   - Włącz Apache i Oracle.
+### 1️⃣ Pobierz repozytorium  
+Pobierz projekt i umieść go w katalogu `htdocs` XAMPP.  
 
-4. **Uruchom aplikację w przeglądarce:**
-   ```
-   http://localhost/twoj-projekt/
-   ```
+### 2️⃣ Skonfiguruj bazę danych  
+- Zainstaluj **Oracle Database XE** (lub użyj istniejącej bazy).  
+- Zaimportuj strukturę tabel z pliku `baza.sql`.  
+- Skonfiguruj połączenie w `config.php` (dostosuj dane logowania do bazy).  
 
-## 📂 Struktura katalogów
+### 3️⃣ Skonfiguruj PHP i XAMPP  
+- **Zainstaluj Oracle Instant Client** (wersja **21+**) z:  
+  👉 [https://www.oracle.com/database/technologies/instant-client.html](https://www.oracle.com/database/technologies/instant-client.html)  
+  (Dodaj ścieżkę do Instant Client w zmiennych środowiskowych systemu).  
+
+- **Włącz rozszerzenie PHP dla Oracle**:  
+  - W pliku `php.ini` odszukaj i odkomentuj:  
+    ```
+    extension=oci8_19
+    ```
+  - Zrestartuj Apache w XAMPP.  
+
+### 4️⃣ Uruchom serwer  
+- Włącz **Apache** i **Oracle Database**.  
+- Otwórz przeglądarkę i wpisz:  
+  ```
+  http://localhost/warsztat/
+  ```  
+
+## 📂 Struktura katalogów  
 ```
-/twoj-projekt
+/warsztat
 │── config.php           # Konfiguracja bazy danych
 │── header.php           # Nagłówek strony (menu)
 │── footer.php           # Stopka strony
@@ -46,13 +54,14 @@
 │── zlecenie_delete.php  # Usuwanie zleceń
 │── zlecenie_edit.php    # Edycja statusu zleceń
 │── README.md            # Dokumentacja projektu
+│── baza.sql             # Baza danych
 ```
 
-## 📌 Funkcjonalności
+## 📌 Funkcjonalności  
 ✅ **Dodawanie i usuwanie klientów**  
 ✅ **Rejestrowanie i usuwanie pojazdów**  
 ✅ **Tworzenie, edytowanie i usuwanie zleceń**  
 ✅ **Wyświetlanie statystyk na stronie głównej**  
 
-## 📜 Licencja
+## 📜 Licencja  
 Projekt dostępny na licencji **MIT** – możesz go dowolnie modyfikować i rozwijać. 🚀  

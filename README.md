@@ -1,5 +1,3 @@
-# 🚗 Warsztat Samochodowy – System Zarządzania
-
 ## 📌 Opis projektu
 **Warsztat Samochodowy** to aplikacja webowa umożliwiająca zarządzanie klientami, pojazdami oraz zleceniami serwisowymi. Projekt wykorzystuje **PHP**, **Oracle SQL** oraz **XAMPP**, oferując intuicyjny interfejs i funkcjonalności ułatwiające prowadzenie warsztatu.
 

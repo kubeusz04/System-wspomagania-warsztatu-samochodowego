@@ -1,10 +1,13 @@
+
+# 🚗 Warsztat Samochodowy 
+
 ## 📌 Opis projektu
-**Warsztat Samochodowy** to aplikacja webowa umożliwiająca zarządzanie klientami, pojazdami oraz zleceniami serwisowymi. Projekt wykorzystuje **PHP**, **Oracle SQL** oraz **XAMPP**, oferując intuicyjny interfejs i funkcjonalności ułatwiające prowadzenie warsztatu.
+**Warsztat Samochodowy** to aplikacja webowa umożliwiająca zarządzanie klientami, pojazdami oraz zleceniami serwisowymi. Projekt został stworzony w **PHP**, korzysta z **Oracle SQL** jako bazy danych i działa lokalnie na **XAMPP**.  
 
 ## 🛠️ Technologie
 - **PHP** – logika aplikacji  
 - **Oracle SQL** – baza danych  
-- **XAMPP** – lokalne środowisko serwera  
+- **XAMPP** – lokalny serwer  
 - **Bootstrap** – responsywny design  
 - **HTML/CSS** – frontend  
 
@@ -31,23 +34,25 @@
 ## 📂 Struktura katalogów
 ```
 /twoj-projekt
-│── /css           # Style CSS
-│── /js            # Skrypty JavaScript
-│── /images        # Obrazy i logo
-│── /sql           # Pliki SQL do bazy danych
-│── config.php     # Konfiguracja połączenia z bazą danych
-│── index.php      # Strona główna
-│── klient_add.php # Dodawanie klientów
-│── pojazd_add.php # Dodawanie pojazdów
-│── zlecenie_add.php # Tworzenie zleceń
-│── README.md      # Dokumentacja projektu
+│── config.php           # Konfiguracja bazy danych
+│── header.php           # Nagłówek strony (menu)
+│── footer.php           # Stopka strony
+│── index.php            # Strona główna (dashboard)
+│── klient_add.php       # Dodawanie klientów
+│── klient_delete.php    # Usuwanie klientów
+│── pojazd_add.php       # Dodawanie pojazdów
+│── pojazd_delete.php    # Usuwanie pojazdów
+│── zlecenie_add.php     # Tworzenie zleceń
+│── zlecenie_delete.php  # Usuwanie zleceń
+│── zlecenie_edit.php    # Edycja statusu zleceń
+│── README.md            # Dokumentacja projektu
 ```
 
 ## 📌 Funkcjonalności
-✅ **Dodawanie i przeglądanie klientów**  
-✅ **Rejestrowanie pojazdów**  
-✅ **Tworzenie zleceń serwisowych**  
-✅ **Podgląd statystyk**  
+✅ **Dodawanie i usuwanie klientów**  
+✅ **Rejestrowanie i usuwanie pojazdów**  
+✅ **Tworzenie, edytowanie i usuwanie zleceń**  
+✅ **Wyświetlanie statystyk na stronie głównej**  
 
 ## 📜 Licencja
 Projekt dostępny na licencji **MIT** – możesz go dowolnie modyfikować i rozwijać. 🚀  

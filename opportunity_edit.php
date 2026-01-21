@@ -13,7 +13,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     oci_bind_by_name($upd_stmt, ':probability', $_POST['probability']);
     oci_bind_by_name($upd_stmt, ':expected_date', $_POST['expected_close_date']);
     oci_bind_by_name($upd_stmt, ':id', $id);
-    if (oci_execute($upd_stmt)) { oci_commit($conn); echo '<script>alert("Zaktualizowano"); window.location.href="opportunities_list.php";</script>'; }
+    if (oci_execute($upd_stmt)) { 
+        oci_commit($conn); 
+        header('Location: opportunities_list.php?message=Zaktualizowano');
+        exit;
+    }
 }
 ?>
 <div class="col-md-12"><h2>Edytuj Szansę</h2><div class="card"><div class="card-body"><form method="POST">

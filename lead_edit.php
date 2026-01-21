@@ -29,7 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     oci_bind_by_name($update_stmt, ':id', $lead_id);
     if (oci_execute($update_stmt)) {
         oci_commit($conn);
-        echo '<script>alert("Lead zaktualizowany"); window.location.href="leads_list.php";</script>';
+        header('Location: leads_list.php?message=Zaktualizowano');
+        exit;
     }
 }
 ?>

@@ -11,7 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     oci_bind_by_name($stmt, ':probability', $_POST['probability']);
     oci_bind_by_name($stmt, ':expected_date', $_POST['expected_close_date']);
     oci_bind_by_name($stmt, ':owner_id', $owner_id);
-    if (oci_execute($stmt)) { oci_commit($conn); echo '<script>alert("Szansa dodana"); window.location.href="opportunities_list.php";</script>'; }
+    if (oci_execute($stmt)) {
+        oci_commit($conn);
+        header('Location: opportunities_list.php?success=1');
+        exit;
+    }
 }
 $contacts = oci_parse($conn, "SELECT ID_CONTACT, FIRST_NAME || ' ' || LAST_NAME AS NAME FROM CONTACTS ORDER BY LAST_NAME");
 oci_execute($contacts);

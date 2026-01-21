@@ -33,8 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (oci_execute($stmt)) {
         oci_commit($conn);
-        $success = 'Lead został dodany pomyślnie!';
-        $_POST = [];
+        header('Location: lead_add.php?success=1');
+        exit;
     } else {
         $e = oci_error($stmt);
         $error = 'Błąd: ' . $e['message'];

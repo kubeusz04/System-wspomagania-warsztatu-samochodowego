@@ -11,7 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     oci_bind_by_name($stmt, ':due_date', $_POST['due_date']);
     oci_bind_by_name($stmt, ':owner_id', $owner_id);
     oci_bind_by_name($stmt, ':assigned_to_id', $_POST['assigned_to_id']);
-    if (oci_execute($stmt)) { oci_commit($conn); echo '<script>alert("Aktywność dodana"); window.location.href="activities_list.php";</script>'; }
+    if (oci_execute($stmt)) { 
+        oci_commit($conn); 
+        header('Location: activities_list.php?success=1');
+        exit;
+    }
 }
 ?>
 <div class="col-md-12"><h2>Dodaj Aktywność</h2><div class="card"><div class="card-body"><form method="POST">
